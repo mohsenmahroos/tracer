@@ -7,7 +7,7 @@ The tracer can be used either by copying and pasting the tracer.hpp file into th
 
 #include "tracer.hpp"
 
-If the macro TRACE is defined before this tracer code, the following trace operations are enabled.
+If the macro TRACE is defined before this tracer code, the following trace operations are enabled using Variadic Macros and Variadic Function Templates.
 
 1. tr_begin(...) macro call increments the trace depth, and then prints the passed arguments.
 2. tr(...) macro call prints the passed arguments without updating the trace depth.

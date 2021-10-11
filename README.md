@@ -13,7 +13,7 @@ If the macro TRACE is defined before this tracer code, the following trace opera
 2. tr(...) macro call prints the passed arguments without updating the trace depth.
 2. tr_end(...) macro call prints the passed arguments, decrements the trace depth, and returns the first argument. This call can be used as the return value of the traced function.
 
-Each traced function should have a tr_begin macro call at the beginning of the function block, a tr_end macro call at the end of the function block, and zero more tr macro call inside the function block.
+Each traced function should have a tr_begin macro call at the beginning of the function block, a tr_end macro call at the end of the function block, and zero or more tr macro call inside the function block.
 
 If the TRACE macro is undefined before the tracer code, the aforementioned trace operations are disabled.
 

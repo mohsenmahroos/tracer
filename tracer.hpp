@@ -2,7 +2,13 @@
 #define TRACER_HPP_INCLUDED
 #ifdef TRACE
 #include <iostream>
+#include <sstream>
 namespace tracer {
+    template<class type>
+    inline auto stringify(const type& v) {
+        std::stringstream ss;
+        ss << v;
+        return ss.str(); }
     inline void pause() { std::cin.get(); }
     template<class Arg, class... Args>
     inline void pause(const Arg& arg, const Args&... args) { std::cout << arg, pause(args...); }
@@ -36,9 +42,11 @@ namespace tracer {
 #define tr_begin(...) tracer::object.begin(__LINE__,__FUNCTION__,__VA_ARGS__)
 #define tr(...)       tracer::object.trace(__LINE__,__FUNCTION__,__VA_ARGS__)
 #define tr_end(...)   tracer::object.end(__LINE__,__FUNCTION__,__VA_ARGS__)
+#define val(arg) std::string(#arg)+" = "+tracer::stringify(arg)
 #else
 #define tr_begin(...)
 #define tr(...)
 #define tr_end(ans,...) ans
+#define val(arg) arg 
 #endif // TRACE
 #endif // TRACER_HPP_INCLUDED

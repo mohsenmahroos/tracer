@@ -6,9 +6,9 @@ using namespace std;
 int factorial(int);
 
 int factorial(int n) {
-    tr_begin(n);
+    tr_begin(val(n));
     const int ans = n > 1 ? n*factorial(n-1) : 1;
-    return tr_end(ans,n); }
+    return tr_end(ans,val(n)); }
 
 inline istream& skip_endl(istream &is) {
     return is.ignore(numeric_limits<streamsize>::max(),'\n'); }

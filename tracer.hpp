@@ -31,10 +31,10 @@ public:
     inline Ans end(int line, const std::string& fun, const Ans& ans, const Args&... args) {
         prefix(trace_depth--,line,fun), suffix(args...), std::cout << "return value = " << ans, pause();
         return ans; } } object;
-#define db(arg) std::string(#arg)+" = "+object.stringify(arg)
-#define tr_begin(...) object.begin(__LINE__,__FUNCTION__,__VA_ARGS__)
-#define tr(...)       object.trace(__LINE__,__FUNCTION__,__VA_ARGS__)
-#define tr_end(...)   object.end(__LINE__,__FUNCTION__,__VA_ARGS__)
+#define db(arg) std::string(#arg)+" = "+tracer.stringify(arg)
+#define tr_begin(...) tracer.begin(__LINE__,__FUNCTION__,__VA_ARGS__)
+#define tr(...)       tracer.trace(__LINE__,__FUNCTION__,__VA_ARGS__)
+#define tr_end(...)   tracer.end(__LINE__,__FUNCTION__,__VA_ARGS__)
 #else
 #define tr_begin(...)
 #define tr(...)

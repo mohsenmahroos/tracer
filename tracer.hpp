@@ -1,7 +1,6 @@
 #ifndef TRACER_HPP_INCLUDED
 #define TRACER_HPP_INCLUDED
 #ifdef TRACE
-
 #include <iostream>
 #include <sstream>
 

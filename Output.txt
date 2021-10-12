@@ -1,0 +1,22 @@
+5
+ 1:LINE 9: factorial("n = 5") called
+
+  2:LINE 9: factorial("n = 4") called
+
+   3:LINE 9: factorial("n = 3") called
+
+    4:LINE 9: factorial("n = 2") called
+
+     5:LINE 9: factorial("n = 1") called
+
+     5:LINE 11: factorial("n = 1") return value = 1
+
+    4:LINE 11: factorial("n = 2") return value = 2
+
+   3:LINE 11: factorial("n = 3") return value = 6
+
+  2:LINE 11: factorial("n = 4") return value = 24
+
+ 1:LINE 11: factorial("n = 5") return value = 120
+
+120

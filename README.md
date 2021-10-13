@@ -1,5 +1,5 @@
 # tracer
-A simple C++ tracer class for tracking function passed arguments and and return value
+A simple C++ tracer class for tracking function passed arguments and return value
 
 It is sometimes required in competitive programming contests, specially in long-time challenges when there is enough time to trace the program execution behavior at run-time before submitting it to the automatic judge, to track the passed arguments and return value of some C++ function(s). This repository presents a simple C++ tracer class for this purpose.
 
